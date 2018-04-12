@@ -6,8 +6,9 @@ using UnityEngine.UI;
 
 public class WordPuzzle : MonoBehaviour {
     public static int[] HintIntervals = { 8, 12, 15 };
-    public WordPair Word = new WordPair();
+    public WordPair Word;
     public WordPuzzleUI WordPuzzleUIprefab;
+    public bool RandomWord = false;
     WordPuzzleUI PuzzleUIobj;
     bool _active = false;
     bool _completed = false;
@@ -17,9 +18,15 @@ public class WordPuzzle : MonoBehaviour {
     int _hintLetters = 0;
     Transform _source;
 
-	
-	// Update is called once per frame
-	void Update () {
+    private void Start()
+    {
+        if (RandomWord)
+        {
+            Word = WordList.RandomWord();
+        }
+    }
+    // Update is called once per frame
+    void Update () {
         if (_active)
         {
             _elapsed = Time.time - _startTime;
@@ -76,11 +83,12 @@ public class WordPuzzle : MonoBehaviour {
             return;
         }
         if (_completed) return;
+
         GameObject c = GameObject.FindWithTag("Canvas");
         PuzzleUIobj = Instantiate<WordPuzzleUI>(WordPuzzleUIprefab, c.transform);
         PuzzleUIobj.transform.name = "Puzzle: " + Word;
         PuzzleUIobj.WordInput.text = "";
-        PuzzleUIobj.WordHint.text = "___";
+        PuzzleUIobj.WordHint.text = "";
         PuzzleUIobj.WordPrompt.text = Word.fi;
 
         _active = true;
@@ -100,6 +108,11 @@ public class WordPuzzle : MonoBehaviour {
         {
             Inventory.GainItem(Word);
             Destroy(_source.gameObject);
+        } else
+        {
+            HiddenWord w = _source.GetComponent<HiddenWord>();
+            if (w != null)
+                w.Hidden = true;
         }
 
         Destroy(PuzzleUIobj.gameObject);

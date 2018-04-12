@@ -1,0 +1,238 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1726226736315096}
+  m_IsPrefabParent: 1
+--- !u!1 &1726226736315096
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4739210463943438}
+  - component: {fileID: 212393371031771574}
+  - component: {fileID: 114986229704528846}
+  - component: {fileID: 61310874233580840}
+  - component: {fileID: 61542428956567806}
+  - component: {fileID: 95851515580099360}
+  - component: {fileID: 50336818262849772}
+  m_Layer: 0
+  m_Name: Mentor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4739210463943438
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726226736315096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.51, y: -2.55, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &50336818262849772
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726226736315096}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &61310874233580840
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726226736315096}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.116930485, y: -0.87473106}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.125, y: 2.8125}
+    newSize: {x: 1.5, y: 1.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.9965076, y: 2.5938168}
+  m_EdgeRadius: 0
+--- !u!61 &61542428956567806
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726226736315096}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.15034437, y: -0.95673704}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.125, y: 2.8125}
+    newSize: {x: 1.5, y: 1.35}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.1682634, y: 0.8990259}
+  m_EdgeRadius: 0
+--- !u!95 &95851515580099360
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726226736315096}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2442098e0ded1ee4296e2737aaca4d27, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114986229704528846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726226736315096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fa719e9f3338774fbd1e3779b20c34e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DialogPanel: {fileID: 0}
+  DialogTextBox: {fileID: 0}
+  CurrentDialog:
+    Content: 
+    Target: 
+    Exits: []
+  NextDialog:
+    Content: 
+    Target: 
+    Exits: []
+  Content: mentor-quiz-2.txt
+  Exits: []
+  Target: mentor-quiz-2.txt
+  Assets:
+  - Content: "Hej fr\xE4mling, jag \xE4r portvakt h\xE4r i Ekoparadiset. F\xF6r att
+      kunna komma in h\xE4r, m\xE5ste du f\xF6rst visa att du kan alla milj\xF6ord!
+      I Ekoparadiset sl\xE4pper vi bara in m\xE4nniskor som \xE4r mycket milj\xF6medvetna.
+      \xC4r du redo?\r"
+    TargetIndex: 1
+  - Content: "Tycker du att du redan \xE4r klar? Vi testar \xE4nnu dina kunskper litet.
+      Vilket ord motsvarar beskrivningen? V\xE4lj r\xE4tt!\r\n\u201CDu t\xE4nker konstigt.\u201D\r\n\u201CNu
+      har du nog helt fel.\u201D\r\n*\u201CEn sann milj\xF6v\xE4n!\u201D"
+    TargetIndex: 2
+  - Content: "1. Om man alltid t\xE4nker p\xE5 milj\xF6n, \xE4r man \u2026\r\ngiftig\r\n*milj\xF6v\xE4nlig\r\nf\xF6rorenad"
+    TargetIndex: 3
+  - Content: "2. Mammuterna har redan gjort det h\xE4r:\r\nsl\xE4nga\r\nkompostera
+      \r\n*d\xF6 ut\r"
+    TargetIndex: 4
+  - Content: "3. Man tar returflaskan tillbaka till butiken:\r\n*\xE5tervinna\r\nsl\xE4nga\r\nf\xF6rorena"
+    TargetIndex: 5
+  - Content: "4. Om man tuggar tuggummi, och sen kastar det i naturen \xE4r det att\u2026\r\n\rsortera\r\n\xE5tervinna\r\n*skr\xE4pa
+      ned\r"
+    TargetIndex: 6
+  - Content: "5. Om jag \xE4ter ett \xE4pple och kastar resten av det i bioavfallet
+      \xE4r det att\u2026\r\r\n\xE5tervinna\r\n*kompostera\r\nf\xF6rorena \r\n"
+    TargetIndex: 7
+  - Content: "7. Isbj\xF6rnen har problem med att klara sig eftersom isarna sm\xE4lter:\r\nh\xE5llbar
+      utveckling\r\n*global uppv\xE4rmning\r\n\xE5tervinning\r"
+    TargetIndex: 8
+  - Content: "8. Att flyga skapar\u2026\r\nskr\xE4p\r\nart \r\n*utsl\xE4pp\r"
+    TargetIndex: 9
+  - Content: "9. Om man l\xE4gger glas i en soptunna, papper i en annan och bioavfall
+      i en tredje \xE4r det att \u2026\r\nkompostera\r\n*sortera \r\nf\xF6rorena\r\n"
+    TargetIndex: 10
+  - Content: "10. Jag vill g\xE4rna k\xF6pa ____________ produkter i matbutiken.\r\n*ekologiska\r\ngiftiga\r\nf\xF6rorenade
+      \r\n"
+    TargetIndex: -1
+  NextIndex: 0
+  CurrentIndex: 0
+--- !u!212 &212393371031771574
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1726226736315096}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: a3eba7878af9b8e499a18d69a2b80057, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1.5, y: 1.35}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0

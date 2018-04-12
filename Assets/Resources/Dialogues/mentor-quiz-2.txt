@@ -1,0 +1,5 @@
+Tycker du att du redan är klar? Vi testar ännu dina kunskper litet. Vilket ord motsvarar beskrivningen? Välj rätt!
+~mentor-quiz-3.txt
+“Du tänker konstigt.”
+“Nu har du nog helt fel.”
+*“En sann miljövän!”

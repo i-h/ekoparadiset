@@ -19,4 +19,21 @@ public class WordList {
         }
         Debug.Log("Word count: " + Words.Count);
     }
+
+    public static string[] GetArray()
+    {
+        string[] wArray = new string[Words.Count];
+        for (int i = 0; i < Words.Count; i++)
+        {
+            wArray[i] = Words[i].ToString();
+        }
+        return wArray;
+    }
+
+    public static WordPair RandomWord()
+    {
+        Load();
+        int randIndex = Random.Range(0, Words.Count);
+        return Words[randIndex];
+    }
 }

@@ -7,6 +7,7 @@ TagManager:
   - Canvas
   - Player1
   - Player2
+  - InventoryPanel
   layers:
   - Default
   - TransparentFX
