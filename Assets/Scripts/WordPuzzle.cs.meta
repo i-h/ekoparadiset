@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d3cbb15d0827b4744bc974c40b1fb07b
+timeCreated: 1523466054
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - WordPuzzleUIprefab: {fileID: 114197656946544908, guid: 84e00357dde33e540abd060126ff4392,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
