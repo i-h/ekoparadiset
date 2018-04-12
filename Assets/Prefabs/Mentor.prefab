@@ -145,6 +145,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogPanel: {fileID: 0}
   DialogTextBox: {fileID: 0}
+  OptionText:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   CurrentDialog:
     Content: 
     Target: 
@@ -158,10 +162,8 @@ MonoBehaviour:
   Target: mentor-quiz-2.txt
   Assets:
   - Content: "Hej fr\xE4mling, jag \xE4r portvakt h\xE4r i Ekoparadiset. F\xF6r att
-      kunna komma in h\xE4r, m\xE5ste du f\xF6rst visa att du kan alla milj\xF6ord!
-      I Ekoparadiset sl\xE4pper vi bara in m\xE4nniskor som \xE4r mycket milj\xF6medvetna.
-      \xC4r du redo?\r"
-    TargetIndex: 1
+      kunna komma in h\xE4r, m\xE5ste du f\xF6rst visa att du kan alla milj\xF6ord!"
+    TargetIndex: 11
   - Content: "Tycker du att du redan \xE4r klar? Vi testar \xE4nnu dina kunskper litet.
       Vilket ord motsvarar beskrivningen? V\xE4lj r\xE4tt!\r\n\u201CDu t\xE4nker konstigt.\u201D\r\n\u201CNu
       har du nog helt fel.\u201D\r\n*\u201CEn sann milj\xF6v\xE4n!\u201D"
@@ -173,23 +175,25 @@ MonoBehaviour:
     TargetIndex: 4
   - Content: "3. Man tar returflaskan tillbaka till butiken:\r\n*\xE5tervinna\r\nsl\xE4nga\r\nf\xF6rorena"
     TargetIndex: 5
-  - Content: "4. Om man tuggar tuggummi, och sen kastar det i naturen \xE4r det att\u2026\r\n\rsortera\r\n\xE5tervinna\r\n*skr\xE4pa
-      ned\r"
+  - Content: "4. Om man tuggar tuggummi, och sen kastar det i naturen \xE4r det att\u2026\r\nsortera\r\n\xE5tervinna\r\n*skr\xE4pa
+      ned"
     TargetIndex: 6
   - Content: "5. Om jag \xE4ter ett \xE4pple och kastar resten av det i bioavfallet
-      \xE4r det att\u2026\r\r\n\xE5tervinna\r\n*kompostera\r\nf\xF6rorena \r\n"
+      \xE4r det att\u2026\r\n\xE5tervinna\r\n*kompostera\r\nf\xF6rorena "
     TargetIndex: 7
   - Content: "7. Isbj\xF6rnen har problem med att klara sig eftersom isarna sm\xE4lter:\r\nh\xE5llbar
-      utveckling\r\n*global uppv\xE4rmning\r\n\xE5tervinning\r"
+      utveckling\r\n*global uppv\xE4rmning\r\n\xE5tervinning"
     TargetIndex: 8
-  - Content: "8. Att flyga skapar\u2026\r\nskr\xE4p\r\nart \r\n*utsl\xE4pp\r"
+  - Content: "8. Att flyga skapar\u2026\r\nskr\xE4p\r\nart \r\n*utsl\xE4pp"
     TargetIndex: 9
   - Content: "9. Om man l\xE4gger glas i en soptunna, papper i en annan och bioavfall
-      i en tredje \xE4r det att \u2026\r\nkompostera\r\n*sortera \r\nf\xF6rorena\r\n"
+      i en tredje \xE4r det att \u2026\r\nkompostera\r\n*sortera \r\nf\xF6rorena"
     TargetIndex: 10
-  - Content: "10. Jag vill g\xE4rna k\xF6pa ____________ produkter i matbutiken.\r\n*ekologiska\r\ngiftiga\r\nf\xF6rorenade
-      \r\n"
+  - Content: "10. Jag vill g\xE4rna k\xF6pa ____________ produkter i matbutiken.\r\n*ekologiska\r\ngiftiga\r\nf\xF6rorenade "
     TargetIndex: -1
+  - Content: " I Ekoparadiset sl\xE4pper vi bara in m\xE4nniskor som \xE4r mycket
+      milj\xF6medvetna. \xC4r du redo?\r"
+    TargetIndex: 1
   NextIndex: 0
   CurrentIndex: 0
 --- !u!212 &212393371031771574
