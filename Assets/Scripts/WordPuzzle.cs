@@ -37,6 +37,9 @@ public class WordPuzzle : MonoBehaviour {
             } else if(PuzzleUIobj.WordInput.text.Length >= Word.se.Length)
             {
                 Completed(false);
+            } else if (!Word.se.StartsWith(PuzzleUIobj.WordInput.text))
+            {
+                Completed(false);
             }
             GiveHints(_elapsed);
         }

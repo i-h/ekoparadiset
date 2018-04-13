@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
-public class Dialogue : MonoBehaviour {
+public class Dialogue : MonoBehaviour
+{
     public static int Score;
     public Transform DialogPanel;
     public Text DialogTextBox;
@@ -21,7 +23,7 @@ public class Dialogue : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D c)
     {
-        if (!_displayed && c.tag.Contains("Player"))
+        if (!_displayed && c.tag.Contains("Player") && GamepadControls.State.Buttons.A == XInputDotNetPure.ButtonState.Pressed)
         {
             Debug.Log("Launching dialogue");
             StartCoroutine(ShowDialogue());
@@ -33,7 +35,8 @@ public class Dialogue : MonoBehaviour {
         Movable.MovementEnabled = false;
         _displayed = true;
         DialogPanel.gameObject.SetActive(true);
-        while (NextIndex >= 0 && NextIndex < Assets.Length)
+        bool exiting = false;
+        while ((NextIndex >= 0 && NextIndex < Assets.Length) && !exiting)
         {
             DialogTextBox.text = "";
             for (int i = 0; i < OptionText.Length; i++)
@@ -42,7 +45,7 @@ public class Dialogue : MonoBehaviour {
             }
             CurrentIndex = NextIndex;
             NextIndex = Assets[CurrentIndex].TargetIndex;
-            DialogStruct current = DialogueTreeEditor.ParseDialogue(Assets[CurrentIndex].Content);
+            DialogStruct current = DialogTools.ParseDialogue(Assets[CurrentIndex].Content);
             for (int i = 0; i < current.Content.Length; i++)
             {
                 float delay = 0.06f;
@@ -52,7 +55,7 @@ public class Dialogue : MonoBehaviour {
                 yield return new WaitForSeconds(delay);
             }
             //Debug.Log(current.Content);
-            for(int i = 0; i < current.Exits.Count; i++)
+            for (int i = 0; i < current.Exits.Count; i++)
             {
                 OptionText[i].text = current.Exits[i].Prompt;
                 if (current.Exits[i].Points > 0)
@@ -67,7 +70,8 @@ public class Dialogue : MonoBehaviour {
             {
                 while (GamepadControls.State.Buttons.A != XInputDotNetPure.ButtonState.Pressed)
                     yield return null;
-            } else
+            }
+            else
             {
                 bool up = false;
                 bool right = false;
@@ -82,24 +86,39 @@ public class Dialogue : MonoBehaviour {
                 switch (_correctIndex)
                 {
                     case 0:
-                        if (up)
-                            Score++;
+                        if (up) Score++;
+                        else exiting = true;
                         break;
                     case 1:
-                        if (right)
-                            Score++;
+                        if (right) Score++;
+                        else exiting = true;
                         break;
                     case 2:
                         if (down)
                             Score++;
+                        else exiting = true;
                         break;
                 }
                 Debug.Log(Score);
+                if(NextIndex == -1)
+                {
+                    StartCoroutine(GoToCredits());
+                }
             }
         }
 
         DialogPanel.gameObject.SetActive(false);
         Movable.MovementEnabled = true;
+        _displayed = false;
+        CurrentIndex = 0;
+        NextIndex = 0;
         yield return null;
+    }
+
+    public IEnumerator GoToCredits()
+    {
+        Movable.MovementEnabled = true;
+        SceneManager.LoadScene(0);
+        return null;
     }
 }

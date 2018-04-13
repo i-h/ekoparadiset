@@ -15,7 +15,7 @@ public class HiddenWord : MonoBehaviour {
         {
             GamepadControls.SetVibration(0, 0);
         }
-        if (c.tag == "Player2")
+        if (c.tag == "Player2" && Hidden)
         {
             Vector3 dir = c.transform.position - transform.position;
             float vStr = Mathf.Pow(1 - Mathf.Clamp(dir.magnitude / MaxDistance, 0.0f, 1.0f), 2);
@@ -24,6 +24,7 @@ public class HiddenWord : MonoBehaviour {
 
             if (GamepadControls.PrevState.Buttons.A == XInputDotNetPure.ButtonState.Pressed)
             {
+                GamepadControls.SetVibration(0, 0);
                 RevealPuzzle();
             }
         }
